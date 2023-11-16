@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEMES SECURITY</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px;
+            background-color:#ffcc00;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature:hover {
+            transform: scale(1.1);
+        }
+
+        .feature h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #010100;
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: #010100; 
+        }
+
+     .radiant-glow {
+            box-shadow: 0 0 20px 10px rgba(235, 11, 11, 0.644);
+        }
+
+        /*Styles for Navigation Bar */
+        .navbar {
+            background-color: rgba(235, 11, 11, 0.644)
+        }
+
+        .navbar a {
+            color: #000000; /* Black */
+        }
+
+        .navbar a:hover {
+            color: #FFFFFF; /* White */
+        }
+
+        p{
+            padding-left: 50px;
+            padding-right: 20px;
+            margin-bottom: 5px;
+        }
+
+
+        /* CSS for Sliding Animation */
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+</style>
+
+
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar p-4 text-white">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-semibold" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">HERMES SECURITY</div>
+            <div class="space-x-4">
+                <a href="aboutus.html" target="_blank">About Us</a>
+                <a href="plans.html" target="_blank">Our Plans</a>
+                <a href="#login">Login</a>
+                <a href="contact.html" target="_blank">Contact</a>
+                
+            </div>
+        </div>
+    </nav>
+
+<!-- Introduction Section -->
+<section id="introduction" class="py-20 bg-white">
+    <div class="container mx-auto">
+        <!-- Your Hermes Security introduction content goes here -->
+        <h1 class="text-4xl font-semibold mb-6">Welcome to Hermes Security</h1>
+        
+        <!-- ... (Insert the rest of your introduction content) ... -->
+        At Hermes Security, we redefine the landscape of data protection with our cutting-edge Data Leakage Detection System. 
+        In an era where information is invaluable, safeguarding your digital assets is not just a necessity; it's our commitment.
+    </div>
+    <!-- Why Choose Hermes Security Section -->
+    <section id="why-choose" class="py-20 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-semibold mb-6 text-center">Why Choose Hermes Security</h2>
+
+            <!-- Feature Circles -->
+            <div class="feature-container">
+                <!-- Feature 1 -->
+                <div class="feature">
+                    <h3>Proactive Threat Mitigation</h3>
+                    
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature">
+                    <h3>Comprehensive Protection</h3>
+                    
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature">
+                    <h3>Compliance Assurance</h3>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+    <!-- My Account Section -->
+    <!-- Login Section -->
+
+    <section id="login" class="py-20 bg-gray-100">
+        <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+            <div class="relative py-3 sm:max-w-xl sm:mx-auto radiant-glow">
+                <div class="absolute inset-0 bg-gradient-to-r from-black to-black shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+                <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+                    <div class="max-w-md mx-auto">
+                        <p class="text-gray-700 text-center">Already have an account? <a href="login.php"
+                            target="_blank">Login</a></p>
+                        <!-- Option for new users -->
+                        <p class="text-gray-700 text-center">New User? <a href="create_account.php"
+                                target="_blank">Create an Account</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Image and Text Section -->
+<section id="features" class="py-20 bg-white text-center">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-semibold mb-4">Our Features</h2>
+
+        <!-- Feature 1: Data Leakage Detection -->
+        <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
+            <div class="w-21 md:w-21">
+                <img src="images/wh-remote-first-work-risks.webp" alt="Data Leakage Detection" class="object-contain h-full w-full">
+            </div>
+            <div class="w-full md:w-3/4">
+                <h3 class="text-xl font-semibold mb-2">Data Leakage Detection</h3>
+                <p class="text-gray-700">Our advanced system detects and prevents data leakage, ensuring your information is secure.</p>
+            </div>
+        </div>
+
+        <!-- Feature 2: Proactive Security -->
+        <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
+            
+            <div class="w-full md:w-3/4">
+                <h3 class="text-xl font-semibold mb-2">Proactive Security</h3>
+                <p class="text-gray-700">We take a proactive approach to security, identifying and preventing potential threats before they occur.</p>
+            </div>
+
+            <div class="w-25 md:w-21">
+                <img src="images/security.jpeg" alt="Proactive Security" class="object-contain h-full w-full">
+            </div>
+        </div>
+
+        <!-- Feature 3: Responsive Support -->
+        <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+            <div class="w-21 md:w-21">
+                <img src="images/support.jpg" alt="Responsive Support" class="object-contain h-full w-full">
+            </div>
+            <div class="w-full md:w-3/4">
+                <h3 class="text-xl font-semibold mb-2">Responsive Support</h3>
+                <p class="text-gray-700">Our team is always ready to assist you with any inquiries or issues. We provide responsive support to ensure your satisfaction.</p>
+            </div>
+        </div>
+
+        <!-- Add more features with images and corresponding text as needed -->
+    </div>
+</section>
+
+
+ <!-- User Reviews Section -->
+ <section id="user-reviews" class="py-20 bg-gray-100">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-semibold mb-4 text-center">User Reviews</h1>
+        <!-- User Reviews Go Here -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Example Review Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-700">"Hermes Security has been a game-changer for us. The data leakage detection system is highly effective, and the team's commitment to security is unparalleled."</p>
+                <p class="text-gray-500 mt-4">- Sarah Johnson</p>
+            </div>
+
+            <!-- Example Review Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-700">"Impressed by the proactive approach of Hermes. Their system not only detects potential threats but also prevents them. We feel much more secure with our sensitive data."</p>
+                <p class="text-gray-500 mt-4">- Alex Rodriguez</p>
+            </div>
+
+            <!-- Example Review Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-700">"Exceptional service! The team at Hermes is always responsive and ready to assist. Their data leakage detection system has become an integral part of our cybersecurity strategy."</p>
+                <p class="text-gray-500 mt-4">- Mark Taylor</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-700">"As a business owner concerned about data security, I've been using this data leakage detection system for several months now, and I'm impressed! The user-friendly interface makes it easy to navigate through potential risks. The system's accurate detection capabilities and real-time alerts provide peace of mind, ensuring that sensitive information remains confidential."</p>
+                <p class="text-gray-500 mt-4">- John Doe</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-700">"I've been a loyal user of this data leakage detection system, and it has truly transformed the way we manage data security. The comprehensive privacy status for each file uploaded allows us to assess potential risks at a glance. "</p>
+                <p class="text-gray-500 mt-4">- Jane Smith</p>
+            </div>
+            
+
+            <!-- Add more review cards as needed -->
+        </div>
+    </div>
+</section>
+
+
+<!-- Trusted By Section -->
+<section id="trusted-by" class="py-20 bg-white text-center">
+    <h2 class="text-3xl font-semibold mb-4">Trusted By</h2>
+    <!-- Trusted Companies Go Here -->
+    <div class="flex flex-wrap justify-center items-center space-x-8">
+        <!-- Example Company Logo 1 -->
+        <div class="w-25 h-20">
+            <img src="images/nasa.png" alt="Company A Logo" class="object-contain h-full w-full">
+        </div>
+
+        <!-- Example Company Logo 2 -->
+        <div class="w-20 h-25">
+            <img src="images/stroeer-rgb.png" alt="Company B Logo" class="object-contain h-full w-full">
+        </div>
+
+        <!-- Example Company Logo 3 -->
+        <div class="w-25 h-20">
+            <img src="images/ccblogo.jpg" width="200px" height="200px" alt="Company C Logo" class="object-contain h-full w-full">
+        </div>
+
+        <div class="w-25 h-20">
+            <img src="images/Aveva.png" alt="Company D Logo" class="object-contain h-full w-full">
+        </div>
+
+        <div class="w-22 h-20">
+            <img src="images/Schneider_Electric.png" alt="Company D Logo" class="object-contain h-full w-full">
+        </div>
+
+        <div class="w-21 h-20">
+            <img src="images/tech_mahindra.png" alt="Company D Logo" class="object-contain h-full w-full">
+        </div>
+        
+        
+        <div class="w-21 h-20">
+            <img src="images/Tata_logo.png" alt="Company D Logo" class="object-contain h-full w-full">
+        </div> 
+
+        <div class="w-21 h-20">
+            <img src="images/hopin.png" alt="Company D Logo" class="object-contain h-full w-full">
+        </div>
+        <!-- Add more company logos as needed -->
+    </div>
+</section>
+
+<!-- Payment Plans Section -->
+<section id="payment-plans" class="py-20 bg-gray-100">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-semibold mb-4 text-center">Payment Plans</h1>
+        <!-- Payment Plans Go Here -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Example Plan Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-2">ATHENA (Basic Plan)</h2>
+                <p class="text-gray-700">Ideal for individuals and small businesses.</p>
+                <p class="text-gray-500 mt-2">Price: Rs. 1999/month</p>
+                <button class="bg-black text-white rounded-md px-2 py-1 mt-4">Subscribe</button>
+            </div>
+
+            <!-- Example Plan Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-2">ARES (Advanced Plan)</h2>
+                <p class="text-gray-700">Perfect for medium to large enterprises.</p>
+                <p class="text-gray-500 mt-2">Price: Rs. 3999/month</p>
+                <button class="bg-black text-white rounded-md px-2 py-1 mt-4">Subscribe</button>
+            </div>
+
+            <!-- Example Plan Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-2">ZEUS (Enterprise Plan)</h2>
+                <p class="text-gray-700">Tailored solutions for maximum security.</p>
+                <p class="text-gray-500 mt-2">Rs. 9999/month</p>
+                <button class="bg-black text-white rounded-md px-2 py-1 mt-4">Subscribe</button>
+            </div>
+
+            <!-- Add more plan cards as needed -->
+        </div>
+    </div>
+</section>
+
+
+    
+</body>
+
+</html>

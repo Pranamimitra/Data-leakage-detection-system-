@@ -1,0 +1,48 @@
+<!-- Add this script to your HTML -->
+<script>
+    // Function to handle file upload using AJAX
+    function uploadFile() {
+      // Create a FormData object to store the file
+      var formData = new FormData();
+  
+      // Get the selected file input
+      var fileInput = document.getElementById('file');
+  
+      // Append the file to the FormData object
+      formData.append('file', fileInput.files[0]);
+  
+      // Create a new XMLHttpRequest
+      var xhr = new XMLHttpRequest();
+  
+      // Configure it to make a POST request to upload.php
+      xhr.open('POST', 'upload.php', true);
+  
+      // Set up the onload and onerror callbacks
+      xhr.onload = function() {
+        // Handle the response from the server
+        if (xhr.status === 200) {
+          // If the server returns a success status
+          alert(xhr.responseText); // You can customize this part
+        } else {
+          // If the server returns an error status
+          alert('Error uploading file.');
+        }
+      };
+  
+      xhr.onerror = function() {
+        // Handle errors during the request
+        alert('Error during the request.');
+      };
+  
+      // Send the FormData object to the server
+      xhr.send(formData);
+    }
+  </script>
+  
+  <!-- Modify your form to call the uploadFile function on submit -->
+  <form onsubmit="uploadFile(); return false;" method="post" enctype="multipart/form-data">
+    <label for="file">Choose a file to upload:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload File">
+  </form>
+  

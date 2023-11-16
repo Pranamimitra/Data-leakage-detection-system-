@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add your stylesheets and scripts here -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Styles for Navigation Bar */
+        .navbar {
+            background-color: rgba(235, 11, 11, 0.8);
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #f0f0f0;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            top: 64px;
+            left: 0;
+            background-color: #333;
+            padding-top: 65px;
+            color: white;
+        }
+
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            margin-left: 200px;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+
+        /* Overview Section Styles */
+        .overview-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .overview-title {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .overview-item {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .overview-item span {
+            font-weight: bold;
+            margin-right: 10px;
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        .overview-stats {
+            display: flex;
+            align-items: center;
+        }
+
+        .overview-stats .stat {
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        .overview-stats .stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .overview-stats .stat-label {
+            color: #777;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar p-4 text-white">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-semibold" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">MY ACCOUNT</div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="dashboard.php">Dashboard</a>
+        <a href="data-leakage.php">Data Leakage Overview & Quick Insights</a>
+        <a href="file-management.php">File Management</a>
+        <a href="account-settings.php">Account Settings</a>
+        <a href="help-support.php">Help and Support</a>
+        <a href="user-reviews.php">User Reviews</a>
+        <a href="logout.php">Logout</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Welcome Message -->
+        <div>
+            <h2 class="text-2xl mb-4">Welcome<?php echo $_SESSION['username']; ?>!</h2>
+        </div>
+
+        <!-- Overview Section -->
+        <div class="overview-container">
+            <h3 class="overview-title">Overview</h3>
+            
+            <!-- Your enhanced overview content goes here -->
+            <div class="overview-item">
+                <span>Total Files Uploaded:</span>
+                <div class="overview-stats">
+                    <div class="stat">
+                        <div class="stat-value">50</div>
+                        <div class="stat-label">Files</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-item">
+                <span>Privacy Status:</span>
+                <div class="overview-stats">
+                    <div class="stat">
+                        <div class="stat-value">20</div>
+                        <div class="stat-label">Public</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">15</div>
+                        <div class="stat-label">Private</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">Shared</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-item">
+                <span>Storage Usage:</span>
+                <div class="overview-stats">
+                    <div class="stat">
+                        <div class="stat-value">75%</div>
+                        <div class="stat-label">of 1 GB</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-item">
+                <span>Recent Activity:</span>
+                <ul>
+                    <li>Uploaded "Document1.pdf" - 2 days ago</li>
+                    <li>Changed privacy settings for "Image.jpg" - 4 days ago</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div>
+                <a href="privacy-policy.html" class="text-blue-500 mr-4">Privacy Policy</a>
+                <a href="terms-of-service.html" class="text-blue-500 mr-4">Terms of Service</a>
+                <a href="contact.html" class="text-blue-500">Contact Us</a>
+            </div>
+            <p class="text-gray-600">&copy; 2023 Your Company. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
